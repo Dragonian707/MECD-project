@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementS : MonoBehaviour
+public class MovementP : MonoBehaviour
 {
    public float speed;
     private float MoveH;
-    private float MoveV;
+    
 
    
 
@@ -20,8 +20,8 @@ public class MovementS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       MoveH = Input.GetAxis("Horizontal");
+      MoveH = Input.GetAxis("Horizontal");
 
-       rb.velocity = new Vector2 (speed * MoveH, rb.velocity.y);    
+       rb.velocity = new Vector2 (speed * MoveH, rb.velocity.x);    
     }
 }
