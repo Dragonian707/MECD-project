@@ -35,10 +35,10 @@ public class WallManager : MonoBehaviour
         }
     }
 
-    public void TargetHit(Vector2 position)
+    public void TargetHit(Vector3 position)
     {
 
-        position -= new Vector2(parentObject.transform.position.x, parentObject.transform.position.y);
+        position -= parentObject.transform.position;
 
         int x = (int)(position.x / 50);
         int y = (int)(position.y / 50);

@@ -36,7 +36,7 @@ public class MovementS : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-           // ChangeSprite(newSprite);
+            FindObjectOfType<WallManager>().TargetHit(gameObject.transform.position);
         }
         
     }
